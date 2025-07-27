@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mail Merge App</title>
+</head>
+<body>
+    <h2>Upload Template and Data</h2>
+    <form action="/merge" method="post" enctype="multipart/form-data">
+        <label>.docx Template: <input type="file" name="docx" required></label><br><br>
+        <label>.xls Data File: <input type="file" name="xls" required></label><br><br>
+
+        <label>Select Output Format:</label><br>
+        <select name="output_type">
+            <option value="separate_docx">Separate .docx for each row</option>
+            <option value="one_docx">Single .docx with all merges</option>
+            <option value="separate_pdf">Separate PDFs for each row</option>
+            <option value="one_pdf">Single PDF with all merges</option>
+        </select><br><br>
+
+        <input type="submit" value="Process Mail Merge">
+    </form>
+</body>
+</html>
